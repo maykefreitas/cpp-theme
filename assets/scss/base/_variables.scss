@@ -8,7 +8,7 @@ $bootstrap-sass-asset-helper: true !default;
 //## Gray and brand colors for use across Bootstrap.
 
 //** Background color for `<body>`.
-$body-bg: #f4f2f0 !default;
+$body-bg: #e7e7e7 !default;
 
 $gray-base: #050505 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
@@ -17,7 +17,7 @@ $gray: lighten($gray-base, 33.5%) !default; // #555
 $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($body-bg, 3.2%) !default;
 
-$brand-primary: #4bbb83 !default;
+$brand-primary: #900712 !default;
 $brand-success: #6bd06b !default;
 $brand-info: #4aabe2 !default;
 $brand-warning: #e67e22 !default;
@@ -30,7 +30,7 @@ $light: #fff !default;
 //## Settings for some of the most global styles.
 
 //** Global text color on `<body>`.
-$text-color: #585858 !default;
+$text-color: #232323 !default;
 
 $border-color-base: #e6e6e6;
 
@@ -51,7 +51,7 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
-$font-size-base: 16px !default;
+$font-size-base: 14px !default;
 $font-size-large: ceil(($font-size-base * 1.25)) !default;
 $font-size-small: ceil(($font-size-base * .85)) !default;
 
@@ -107,9 +107,9 @@ $padding-xs-horizontal: 5px !default;
 $line-height-large: 1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small: 1.5 !default;
 
-$border-radius-base: 3px !default;
-$border-radius-large: 4px !default;
-$border-radius-small: 3px !default;
+$border-radius-base: 0 !default;
+$border-radius-large: 0 !default;
+$border-radius-small: 0 !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color: $light !default;

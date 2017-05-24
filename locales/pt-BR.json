@@ -182,12 +182,12 @@
   },
   "login": {
     "enter_your_account": "Entre com a sua conta",
-    "email": "Email",
+    "email": "Login",
     "password": "Senha",
-    "forgot": "Esqueceu?",
+    "forgot": "Esqueci minha senha",
     "enter": "Entrar",
     "not_have_account": "Não possui conta?",
-    "create_account": "<b>CRIAR CONTA</b>"
+    "create_account": "Novo Cadastro"
   },
   "register": {
     "first_name": "Seu Nome",

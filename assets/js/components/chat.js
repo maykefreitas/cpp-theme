@@ -36,6 +36,10 @@
 
       self.user = $("#school-header").data('user');
 
+      if(!self.user) {
+        return;
+      }
+
       self.schoolId = self.$chat.data('school-id');
       self.apiKey = self.$chat.data('api-key');
       self.userId = self.user.id;

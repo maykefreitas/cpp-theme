@@ -6,12 +6,6 @@ $color-border: {{ settings.style.color_border | default: 'inherit' }};
 $type-base-family: '{{ settings.style.type_base_family | default: 'inherit' }}';
 $type-base-size: {{ settings.style.type_base_size | default: 'inherit' }};
 
-/* Navbar */
-$color-navabar-bg: {{ settings.style.color_navbar_bg | default: 'inherit' }};
-$color-navabar-links: {{ settings.style.color_navbar_links | default: 'inherit' }};
-$type-navbar-family: '{{ settings.style.type_navbar_family | default: 'inherit' }}';
-$type-navbar-size: {{ settings.style.type_navbar_size | default: 'inherit' }};
-
 /* Buttons */
 $color-button-primary-bg: {{ settings.style.color_button_primary_bg | default: 'inherit' }};
 $color-button-secondary-bg: {{ settings.style.color_button_secondary_bg | default: 'inherit' }};
@@ -34,23 +28,6 @@ $type-paragraph-family: '{{ settings.style.type_paragraph_family | default: 'inh
 $type-paragraph-size: {{ settings.style.type_paragraph_size | default: 'inherit' }};
 $type-button-family: '{{ settings.style.type_paragraph_family | default: 'inherit' }}';
 $type-button-size: {{ settings.style.type_paragraph_size | default: 'inherit' }};
-
-
-/* Home Page */
-$home-header-background: {{ settings.style.home.header_bg | default: '#ffffff' }};
-$home-header-text-color: {{ settings.style.home.header_text_color | default: 'inherit' }};
-$home-header-background-image: "{{ settings.style.home.header_background_image | default: '' }}";
-
-
-/* Home Page benefits */
-$home-benefits-icon-color: {{ settings.style.home.benefits.color_icon | default: '#000000' }};
-$home-benefits-title-color: {{ settings.style.home.benefits.color_title | default: '#000000' }};
-$home-benefits-text-color: {{ settings.style.home.benefits.color_text | default: '#000000' }};
-
-/* Product Page */
-$product-header-background: {{ settings.style.product.header_bg | default: '#ffffff' }};
-$product-header-text-color: {{ settings.style.product.header_text_color | default: 'inherit' }};
-$product-header-background-image: "{{ settings.style.product.header_background_image | default: ''}}";
 
 /* General */
 
@@ -161,49 +138,6 @@ a {
   }
 }
 
-/* Navbar */
-
-header.navbar {
-  background-color: $color-navabar-bg;
-
-  a,
-  .dropdown a {
-    color: rgba($color-navabar-links, .6) !important;
-
-    &:hover, &:focus {
-      color: $color-navabar-links !important;;
-    }
-  }
-
-  .nav {
-    a {
-      font-family: $type-navbar-family;
-      font-size: $type-navbar-size;
-    }
-  }
-
-  $dropdown-menu-bg: lighten($color-navabar-bg, 3%);
-  .dropdown-menu {
-    background-color: $dropdown-menu-bg;
-
-    &:before {
-      background-color: $dropdown-menu-bg;
-    }
-
-    li {
-      a {
-        &:hover {
-          @if (lightness($dropdown-menu-bg) > 50) {
-            background-color: darken($color-navabar-bg, 2%);
-          } @else {
-            background-color: $color-navabar-bg;
-          }
-        }
-      }
-    }
-  }
-}
-
 /* Buttons */
 
 .btn {
@@ -298,55 +232,6 @@ header.navbar {
           color: #fff;
         }
       }
-    }
-  }
-}
-
-/* Home Page */
-
-.home-page {
-  .home-header {
-    background-color: $home-header-background;
-    background-image: url($home-header-background-image);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    * {
-      color: $home-header-text-color !important;
-    }
-  }
-
-  .home-benefits {
-    .media {
-      .benefits-icon {
-        color: $home-benefits-icon-color !important;
-      }
-
-      h2 {
-        color: $home-benefits-title-color !important;
-      }
-
-      p {
-        color: $home-benefits-text-color  !important;
-      }
-    }
-  }
-}
-
-/* Product Page */
-
-.product-page {
-  .product-header {
-    background-color: $product-header-background;
-    background-image: url($product-header-background-image);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    h2,
-    h4,
-    p,
-    .price {
-      color: $product-header-text-color;
     }
   }
 }
