@@ -25,7 +25,7 @@ header.navbar {
   }
 
   .navbar-login-form {
-    $input-br: darken($gray-lighter, 10%);
+    $input-bg: darken($gray-lighter, 2%);
 
     padding: 18px 0;
     font-size: 14px;
@@ -39,8 +39,8 @@ header.navbar {
 
     .form-control {
       padding: 3px 8px;
-      border-color: $input-br;
-      background-color: $input-br;
+      border-color: $input-bg;
+      background-color: $input-bg;
     }
 
     .btn {
@@ -65,5 +65,13 @@ header.navbar {
         }
       }
     }
+  }
+}
+
+.scrolled {
+  header.navbar {
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, .06));
+
+    background-color: $light;
   }
 }

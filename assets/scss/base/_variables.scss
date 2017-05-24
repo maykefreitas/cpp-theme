@@ -15,7 +15,7 @@ $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
 $gray: lighten($gray-base, 33.5%) !default; // #555
 $gray-light: lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter: lighten($gray-base, 58%) !default;
+$gray-lighter: lighten($gray-base, 80%) !default;
 
 $brand-primary: #900712 !default;
 $brand-success: #6bd06b !default;
@@ -344,7 +344,7 @@ $container-desktop: (940px + $grid-gutter-width) !default;
 $container-md: $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop: (1140px + $grid-gutter-width) !default;
+$container-large-desktop: (1024px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg: $container-large-desktop !default;
 

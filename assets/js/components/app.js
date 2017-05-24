@@ -23,8 +23,8 @@
 
     bindTooltips: function () {
       $("[data-toggle='tooltip']")
-      .tooltip("destroy")
-      .tooltip();
+        .tooltip("destroy")
+        .tooltip();
 
       $(document).trigger('app:bind:tooltips');
     },
@@ -43,8 +43,18 @@
     },
 
     init: function () {
-      app.pagarme.init();
+      $(document).on('scroll', function () {
+        var scrollTop = $(document).scrollTop();
+        var $body = $('body');
 
+        if (scrollTop > 0 && !$body.hasClass('scrolled')) {
+          $body.addClass('scrolled');
+        } else if (scrollTop <= 0 && $body.hasClass('scrolled')) {
+          $body.removeClass('scrolled');
+        }
+      });
+
+      app.pagarme.init();
       app.bindGlobal();
       app.bindBlazy();
       app.bindOpenOnLoad();

@@ -1,3 +1,32 @@
 <div class="home-page page">
   {% include 'home/header' %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <ul class="home-categories">
+          {% for category in categories %}
+            {% if category.parent_category_id == nil %}
+              <li>
+                <a href="/categories/{{ category.slug }}">{{ category.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-sm-8">
+        {% assign home_products = current_school | get_products_by_category_slug, 'destaque', 6 %}
+
+        <div class="row">
+          <div id="js-product-list">
+            {% for product in products %}
+              <div class="col-sm-6">
+                {% include 'product/product-card', product: product, gateway: gateway %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -7,6 +7,7 @@
 
   .home-hero {
     position: relative;
+    margin-bottom: $padding-large-vertical * 10;
     min-height: 363px;
     max-height: 380px;
     background-size: cover;
@@ -59,6 +60,29 @@
         bottom: 17px;
         left: 320px;
         max-width: 615px;
+      }
+    }
+  }
+
+  .home-categories {
+    $color: lighten($body-bg, 75%);
+
+    margin: 0;
+    padding: $padding-large-vertical * 2 0;
+    max-width: 320px;
+    border-top: 1px solid $color;
+    border-bottom: 1px solid $color;
+    color: $color;
+    list-style: none;
+
+    li {
+      a {
+        @include ellipsis();
+
+        display: block;
+        padding: 5px 0;
+        color: $color;
+        font-size: 16px;
       }
     }
   }
