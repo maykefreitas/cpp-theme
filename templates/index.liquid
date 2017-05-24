@@ -2,6 +2,21 @@
   {% include 'home/header' %}
 
   <div class="container">
+    <div class="home-social-links">
+      {% if settings.view.social.instagram.size > 0 %}
+        <a href="#"><i class="sprite-instagram sprite"></i></a>
+      {% endif %}
+      {% if settings.view.social.facebook.size > 0 %}
+        <a href="#"><i class="sprite-facebook sprite"></i></a>
+      {% endif %}
+      {% if settings.view.social.twitter.size > 0 %}
+        <a href="#"><i class="sprite-twitter sprite"></i></a>
+      {% endif %}
+      {% if settings.view.social.pinterest.size > 0 %}
+        <a href="#"><i class="sprite-pinterest sprite"></i></a>
+      {% endif %}
+    </div>
+
     <div class="row">
       <div class="col-sm-4">
         <ul class="home-categories">
@@ -28,9 +43,9 @@
         {% assign home_products = current_school | get_products_by_category_slug, 'destaque', 6 %}
 
         <div class="row">
-          <div id="js-product-list">
+          <div id="js-product-list" class="home-product-list">
             {% for product in products %}
-              <div class="col-sm-6">
+              <div class="col col-sm-6">
                 {% include 'product/product-card', product: product, gateway: gateway %}
               </div>
             {% endfor %}

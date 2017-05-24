@@ -1,5 +1,6 @@
 .home-page {
   padding: 0;
+  background-color: $dark;
 
   .navbar {
     border-bottom: none;
@@ -52,6 +53,25 @@
           max-width: 100%;
           height: auto;
         }
+      }
+    }
+  }
+
+  .home-social-links {
+    margin-bottom: $padding-large-vertical * 8;
+    text-align: right;
+  }
+
+  .home-product-list {
+    .col {
+      text-align: right;
+
+      .product-card {
+        display: inline-block;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        text-align: left;
       }
     }
   }

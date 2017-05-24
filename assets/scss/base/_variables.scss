@@ -8,7 +8,7 @@ $bootstrap-sass-asset-helper: true !default;
 //## Gray and brand colors for use across Bootstrap.
 
 //** Background color for `<body>`.
-$body-bg: #272727 !default;
+$body-bg: #f2f2f2 !default;
 
 $gray-base: #050505 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
@@ -24,6 +24,7 @@ $brand-warning: #e67e22 !default;
 $brand-danger: #f54545 !default;
 
 $light: #fff !default;
+$dark: #272727;
 
 //== Scaffolding
 //

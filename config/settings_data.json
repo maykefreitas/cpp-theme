@@ -78,6 +78,12 @@
               "url": "https://instagram.com"
             }
           ]
+        },
+        "social": {
+          "facebook": "https://facebook.com",
+          "instagram": "https://instagram.com",
+          "twitter": "https://twitter.com",
+          "pinterest": "https://pinterest.com"
         }
       }
     }

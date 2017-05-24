@@ -616,5 +616,43 @@
         }
       }
     ]
+  },
+  {
+    "name": "Redes Sociais",
+    "id": "7",
+    "settings": [
+      {
+        "key": "view.social.facebook",
+        "type": "input",
+        "templateOptions": {
+          "label": "Facebook",
+          "required": false
+        }
+      },
+      {
+        "key": "view.social.instagram",
+        "type": "input",
+        "templateOptions": {
+          "label": "Instagram",
+          "required": false
+        }
+      },
+      {
+        "key": "view.social.twitter",
+        "type": "input",
+        "templateOptions": {
+          "label": "Twitter",
+          "required": false
+        }
+      },
+      {
+        "key": "view.social.pinterest",
+        "type": "input",
+        "templateOptions": {
+          "label": "Pinterest",
+          "required": false
+        }
+      }
+    ]
   }
 ]
