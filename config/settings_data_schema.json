@@ -14,44 +14,6 @@
         }
       },
       {
-        "key": "style.color_body_bg",
-        "type": "color",
-        "templateOptions": {
-          "label": "Fundo"
-        }
-      },
-      {
-        "key": "style.color_content_bg",
-        "type": "color",
-        "templateOptions": {
-          "label": "Conteúdo Principal"
-        }
-      },
-      {
-        "key": "style.color_border",
-        "type": "color",
-        "templateOptions": {
-          "label": "Bordas"
-        }
-      },
-      {
-        "template": "<h3>Navbar</h3>"
-      },
-      {
-        "key": "style.color_navbar_bg",
-        "type": "color",
-        "templateOptions": {
-          "label": "Fundo"
-        }
-      },
-      {
-        "key": "style.color_navbar_links",
-        "type": "color",
-        "templateOptions": {
-          "label": "Links"
-        }
-      },
-      {
         "template": "<h3>Botões</h3>"
       },
       {
@@ -66,37 +28,6 @@
         "type": "color",
         "templateOptions": {
           "label": "Secundários"
-        }
-      },
-      {
-        "template": "<h3>Texto</h3>"
-      },
-      {
-        "key": "style.color_body_text",
-        "type": "color",
-        "templateOptions": {
-          "label": "Geral"
-        }
-      },
-      {
-        "key": "style.color_titles",
-        "type": "color",
-        "templateOptions": {
-          "label": "Títulos"
-        }
-      },
-      {
-        "key": "style.color_subtitles",
-        "type": "color",
-        "templateOptions": {
-          "label": "Sub-títulos"
-        }
-      },
-      {
-        "key": "style.color_paragraphs",
-        "type": "color",
-        "templateOptions": {
-          "label": "Parágrafos"
         }
       },
       {
@@ -118,30 +49,6 @@
         "type": "color",
         "templateOptions": {
           "label": "Texto dos botões secundários"
-        }
-      },
-      {
-        "template": "<h3>Rodapé</h3>"
-      },
-      {
-        "key": "style.color_footer_bg",
-        "type": "color",
-        "templateOptions": {
-          "label": "Fundo"
-        }
-      },
-      {
-        "key": "style.color_footer_text",
-        "type": "color",
-        "templateOptions": {
-          "label": "Texto"
-        }
-      },
-      {
-        "key": "style.color_footer_links",
-        "type": "color",
-        "templateOptions": {
-          "label": "Links"
         }
       }
     ]
@@ -224,86 +131,6 @@
       },
       {
         "key": "style.type_base_size",
-        "type": "input",
-        "templateOptions": {
-          "label": "Tamanho da Fonte",
-          "placeholder": "ex: 16px"
-        }
-      },
-      {
-        "template": "<h3>Links da Navbar</h3>"
-      },
-      {
-        "key": "style.type_navbar_family",
-        "type": "select",
-        "templateOptions": {
-          "label": "Fonte",
-          "options": [
-            {
-              "name": "Proxima Nova",
-              "value": "Proxima Nova"
-            },
-            {
-              "name": "Open Sans",
-              "value": "Open Sans"
-            },
-            {
-              "name": "Roboto",
-              "value": "Roboto"
-            },
-            {
-              "name": "Merriweather",
-              "value": "Merriweather"
-            },
-            {
-              "name": "Lato",
-              "value": "Lato"
-            },
-            {
-              "name": "Anonymous Pro",
-              "value": "Anonymous Pro"
-            },
-            {
-              "name": "Crimson Text",
-              "value": "Crimson Text"
-            },
-            {
-              "name": "Chivo",
-              "value": "Chivo"
-            },
-            {
-              "name": "Karla",
-              "value": "Karla"
-            },
-            {
-              "name": "Alegreya Sans",
-              "value": "Alegreya Sans"
-            },
-            {
-              "name": "Source Serif Pro",
-              "value": "Source Serif Pro"
-            },
-            {
-              "name": "Helvetica",
-              "value": "Helvetica"
-            },
-            {
-              "name": "Verdana",
-              "value": "Verdana"
-            },
-            {
-              "name": "Arial",
-              "value": "Arial"
-            },
-            {
-              "name": "Courier New",
-              "value": "Courier New"
-            }
-          ]
-        }
-      },
-      {
-        "key": "style.type_navbar_size",
         "type": "input",
         "templateOptions": {
           "label": "Tamanho da Fonte",
@@ -650,39 +477,6 @@
     ]
   },
   {
-    "name": "Navbar",
-    "id": "3",
-    "settings": [
-      {
-        "key": "view.general.navbar.title",
-        "type": "input",
-        "templateOptions": {
-          "label": "Texto Exibido"
-        }
-      },
-      {
-        "template": "<label>URL da Logo</label><p><small>Dica: faça o upload da Imagem na Biblioteca e copie sua URL.</small></p>"
-      },
-      {
-        "key": "view.general.navbar.logo",
-        "type": "input",
-        "templateOptions": {
-          "label": ""
-        }
-      },
-      {
-        "template": "<label>Favicon</label><p><small>Dica: faça o upload da Imagem na Biblioteca e copie sua URL.</small></p>"
-      },
-      {
-        "key": "view.general.favicon",
-        "type": "input",
-        "templateOptions": {
-          "label": ""
-        }
-      }
-    ]
-  },
-  {
     "name": "Home Page",
     "id": "4",
     "settings": [
@@ -783,72 +577,6 @@
         "type": "input",
         "templateOptions": {
           "label": "Título após descrição"
-        }
-      }
-    ]
-  },
-  {
-    "name": "Footer",
-    "id": "7",
-    "settings": [
-      {
-        "key": "view.general.footer.logo",
-        "type": "input",
-        "templateOptions": {
-          "label": "URL da Logo"
-        }
-      },
-      {
-        "key": "view.general.footer.text",
-        "type": "textarea",
-        "templateOptions": {
-          "label": "Texto",
-          "rows": 5
-        }
-      },
-      {
-        "template": "<h3>Dados da Escola</h3>"
-      },
-      {
-        "key": "view.general.footer.site",
-        "type": "checkbox",
-        "templateOptions": {
-          "label": "Site"
-        }
-      },
-      {
-        "key": "view.general.footer.email",
-        "type": "checkbox",
-        "templateOptions": {
-          "label": "Email"
-        }
-      },
-      {
-        "key": "view.general.footer.phone",
-        "type": "checkbox",
-        "templateOptions": {
-          "label": "Telefone"
-        }
-      },
-      {
-        "key": "view.general.footer.address",
-        "type": "checkbox",
-        "templateOptions": {
-          "label": "Endereço"
-        }
-      },
-      {
-        "key": "view.general.footer.cnpj",
-        "type": "checkbox",
-        "templateOptions": {
-          "label": "CNPJ"
-        }
-      },
-      {
-        "key": "view.general.footer.razao_social",
-        "type": "checkbox",
-        "templateOptions": {
-          "label": "Razão Social"
         }
       }
     ]

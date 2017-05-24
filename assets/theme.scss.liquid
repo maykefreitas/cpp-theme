@@ -1,8 +1,5 @@
 /* General */
 $color-primary: {{ settings.style.color_primary | default: 'inherit' }};
-$color-body-bg: {{ settings.style.color_body_bg | default: 'inherit' }};
-$color-content-bg: {{ settings.style.color_content_bg | default: 'inherit' }};
-$color-border: {{ settings.style.color_border | default: 'inherit' }};
 $type-base-family: '{{ settings.style.type_base_family | default: 'inherit' }}';
 $type-base-size: {{ settings.style.type_base_size | default: 'inherit' }};
 
@@ -11,15 +8,9 @@ $color-button-primary-bg: {{ settings.style.color_button_primary_bg | default: '
 $color-button-secondary-bg: {{ settings.style.color_button_secondary_bg | default: 'inherit' }};
 
 /* Text */
-$color-titles: {{ settings.style.color_titles | default: 'inherit' }};
-$color-subtitles: {{ settings.style.color_subtitles | default: 'inherit' }};
 $color-links: {{ settings.style.color_links | default: 'inherit' }};
-$color-paragraphs: {{ settings.style.color_paragraphs | default: 'inherit' }};
 $color-button-primary-text: {{ settings.style.color_button_primary_text | default: 'inherit' }};
 $color-button-secondary-text: {{ settings.style.color_button_secondary_text | default: 'inherit' }};
-$color-footer-bg: {{ settings.style.color_footer_bg | default: 'inherit' }};
-$color-footer-text: {{ settings.style.color_footer_text | default: 'inherit' }};
-$color-footer-links: {{ settings.style.color_footer_links | default: 'inherit' }};
 $type-title-family: '{{ settings.style.type_title_family | default: 'inherit' }}';
 $type-title-size: {{ settings.style.type_title_size | default: 'inherit' }};
 $type-subtitle-family: '{{ settings.style.type_subtitle_family | default: 'inherit' }}';
@@ -38,29 +29,16 @@ html.turbolinks-progress-bar::before {
 body {
   font-family: $type-base-family, Helvetica, Arial, sans-serif, sans-serif;;
   font-size: $type-base-size;
-  background-color: $color-body-bg;
-}
-
-.page {
-  background-color: $color-content-bg;
 }
 
 /* Text */
 
 h1, h2 {
   font-family: $type-title-family;
-
-  * {
-    color: $color-titles;
-  }
 }
 
 h3, h4, h5 {
   font-family: $type-subtitle-family;
-
-  * {
-    color: $color-subtitles;
-  }
 }
 
 h1 {
@@ -96,46 +74,10 @@ h5 {
 p {
   font-family: $type-paragraph-family;
   font-size: $type-paragraph-size;
-
-  * {
-    color: $color-paragraphs;
-  }
 }
 
 a {
   color: $color_links;
-}
-
-.page-footer {
-  background-color: $color-footer-bg;
-
-  * {
-    color: $color-footer-text;
-  }
-
-  a {
-    * {
-      color: $color-footer-links;
-    }
-
-    &:hover {
-      * {
-        color: lighten($color-footer-text, 45%) !important;
-      }
-    }
-  }
-
-  b {
-    * {
-      color: lighten($color-footer-text, 15%) !important;
-    }
-  }
-
-  h2 {
-    * {
-      color: lighten($color-footer-text, 35%);
-    }
-  }
 }
 
 /* Buttons */
