@@ -52,13 +52,30 @@
         "home": {
           "slides": [
             {
-              "image": "http://placehold.it/615x256?text=Slide+1"
+              "image": "https://unsplash.it/615/256?image=1"
             },
             {
-              "image": "http://placehold.it/615x256?text=Slide+2"
+              "image": "https://unsplash.it/615/256?image=2"
             },
             {
-              "image": "http://placehold.it/615x256?text=Slide+3"
+              "image": "https://unsplash.it/615/256?image=3"
+            }
+          ],
+          "partners": [
+            {
+              "name": "Parceiro 1",
+              "image": "https://unsplash.it/168/168?image=4",
+              "url": "https://google.com"
+            },
+            {
+              "name": "Parceiro 2",
+              "image": "https://unsplash.it/168/168?image=5",
+              "url": "https://facebook.com"
+            },
+            {
+              "name": "Parceiro 3",
+              "image": "https://unsplash.it/168/168?image=6",
+              "url": "https://instagram.com"
             }
           ]
         }

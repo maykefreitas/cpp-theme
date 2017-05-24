@@ -499,6 +499,42 @@
             }
           ]
         }
+      },
+      {
+        "template": "<h3>Parceiros</h3>"
+      },
+      {
+        "type": "repeatSection",
+        "key": "view.home.partners",
+        "templateOptions": {
+          "btnText": "Adicionar Novo Parceiro",
+          "fields": [
+            {
+              "key": "name",
+              "type": "input",
+              "templateOptions": {
+                "label": "Nome",
+                "required": true
+              }
+            },
+            {
+              "key": "image",
+              "type": "input",
+              "templateOptions": {
+                "label": "Imagem",
+                "required": true
+              }
+            },
+            {
+              "key": "url",
+              "type": "input",
+              "templateOptions": {
+                "label": "Url",
+                "required": false
+              }
+            }
+          ]
+        }
       }
     ]
   },

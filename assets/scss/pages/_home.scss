@@ -6,55 +6,7 @@
   }
 
   .home-hero {
-    position: relative;
-    margin-bottom: $padding-large-vertical * 10;
-    min-height: 363px;
-    max-height: 380px;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .hero-bg {
-      width: 100%;
-      height: auto;
-    }
-
     .hero-content {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-
-      .container {
-        position: relative;
-        height: 100%;
-      }
-
-      .hero-badge {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        min-height: 120px;
-        max-width: 320px;
-        width: 100%;
-        height: calc(100% - 90px);
-        background-color: $brand-primary;
-
-        &:after {
-          @include transform-origin(0 0);
-
-          position: absolute;
-          top: 100%;
-          left: 0;
-          padding-bottom: 25%;
-          width: 52%;
-          background-color: $brand-primary;
-          content: '';
-          transform: rotate(-14.5deg) skewX(61deg);
-        }
-      }
-
       .hero-slider {
         position: absolute;
         bottom: 17px;
@@ -83,6 +35,23 @@
         padding: 5px 0;
         color: $color;
         font-size: 16px;
+      }
+    }
+  }
+
+  .home-partners {
+    margin: $padding-large-vertical * 8 0;
+    padding: $padding-large-vertical * 2 0;
+
+    li {
+      a {
+        display: block;
+        margin-bottom: 35px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
       }
     }
   }

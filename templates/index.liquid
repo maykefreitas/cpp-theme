@@ -13,6 +13,16 @@
             {% endif %}
           {% endfor %}
         </ul>
+
+        <ul class="home-partners">
+          {% for partner in settings.view.home.partners %}
+            <li>
+              <a href="{{ partner.url }}" target="_blank">
+                {% image, src: partner.image, alt: partner.name %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="col-sm-8">
         {% assign home_products = current_school | get_products_by_category_slug, 'destaque', 6 %}
