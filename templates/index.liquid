@@ -4,16 +4,16 @@
   <div class="container">
     <div class="home-social-links">
       {% if settings.view.social.instagram.size > 0 %}
-        <a href="#"><i class="sprite-instagram sprite"></i></a>
+        <a href="{{ settings.view.social.instagram }}" target="_blank"><i class="sprite-instagram sprite"></i></a>
       {% endif %}
       {% if settings.view.social.facebook.size > 0 %}
-        <a href="#"><i class="sprite-facebook sprite"></i></a>
+        <a href="{{ settings.view.social.facebook }}" target="_blank"><i class="sprite-facebook sprite"></i></a>
       {% endif %}
       {% if settings.view.social.twitter.size > 0 %}
-        <a href="#"><i class="sprite-twitter sprite"></i></a>
+        <a href="{{ settings.view.social.twitter }}" target="_blank"><i class="sprite-twitter sprite"></i></a>
       {% endif %}
       {% if settings.view.social.pinterest.size > 0 %}
-        <a href="#"><i class="sprite-pinterest sprite"></i></a>
+        <a href="{{ settings.view.social.pinterest }}" target="_blank"><i class="sprite-pinterest sprite"></i></a>
       {% endif %}
     </div>
 

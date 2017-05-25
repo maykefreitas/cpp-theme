@@ -61,7 +61,20 @@
   <script async src="{{ 'theme.js' | asset_url }}"></script>
 
 </head>
-<body class="{% if current_path == '/' %}home-page{% elsif product %}product-page{% elsif current_path == '/chat' %}chat-page{% endif %}">
+
+{% if current_path == '/' %}
+  {% assign page_class = 'home-page' %}
+{% elsif product %}
+  {% assign page_class = 'product-page' %}
+{% elsif current_path == '/chat' %}
+  {% assign page_class = 'chat-page' %}
+{% elsif categories and category %}
+  {% assign page_class = 'category-page' %}
+{% else %}
+  {% assign page_class = '' %}
+{% endif %}
+
+<body class="{{ page_class }}">
 <div class="content-wrapper">
   {% include 'navbar' %}
   {% include 'alert-notice' %}
