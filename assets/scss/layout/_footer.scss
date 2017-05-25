@@ -2,7 +2,45 @@
   $footer-color: $dark;
 
   padding: $padding-large-vertical * 6 0;
+  border-top: 1px solid lighten($body-bg, 75%);
   background-color: $footer-color;
-  color: #747474;
-  font-weight: 600;
+  color: darken($light, 15%);
+  font-weight: 400;
+  font-size: 14px;
+
+  a,
+  b {
+    color: $light;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .footer-content {
+    margin: 0 auto;
+    max-width: 345px;
+  }
+
+  .footer-social-links {
+    float: right;
+    text-align: left;
+
+    .title {
+      margin-bottom: 5px;
+      color: $light;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    a {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

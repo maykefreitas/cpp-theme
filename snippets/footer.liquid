@@ -1,5 +1,51 @@
 <footer class="page-footer">
   <div class="container">
-
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-content">
+          <p><b>CPP-CURSOS PARA A POLÍCIA</b></p>
+          <p><b>1º Curso especializado em Carreiras Policiais</b></p>
+          <p>Rua Juca Floriano, Casa Verde - São Paulo - SP</p>
+          <br>
+          <p><b>Central de Atendimento:</b></p>
+          <p>sac@cursosparapolicia.com.br</p>
+          <p>Telefone: (11) 2306-8408</p>
+          <p>de segunda a sexta, entre 8h e 18h</p>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="footer-content">
+          <p><b>Produção das videoaulas:</b></p>
+          <p>Todas as videoaulas forma gravadas em nossos</p>
+          <p>etúdios, com renomados professores, utilizando os</p>
+          <p>mais avançados equipamentos para garantir a melhor</p>
+          <p>qualidade de ensino em nossos vídeos.</p>
+          <br>
+          <p><a href="#">Clique aqui</a> e leia o contrato antes de finalizar a compra.</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="footer-social-links">
+          <div class="title">Redes Sociais:</div>
+          <div class="icons">
+            {% if settings.view.social.instagram.size > 0 %}
+              <a href="{{ settings.view.social.instagram }}" target="_blank"><i
+                  class="sprite-icon-instagram sprite"></i></a>
+            {% endif %}
+            {% if settings.view.social.facebook.size > 0 %}
+              <a href="{{ settings.view.social.facebook }}" target="_blank"><i class="sprite-icon-facebook sprite"></i></a>
+            {% endif %}
+            {% if settings.view.social.twitter.size > 0 %}
+              <a href="{{ settings.view.social.twitter }}" target="_blank"><i
+                  class="sprite-icon-twitter sprite"></i></a>
+            {% endif %}
+            {% if settings.view.social.pinterest.size > 0 %}
+              <a href="{{ settings.view.social.pinterest }}" target="_blank"><i
+                  class="sprite-icon-pinterest sprite"></i></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
