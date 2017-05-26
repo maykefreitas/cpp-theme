@@ -9,6 +9,7 @@ header.navbar {
 
   .navbar-brand {
     display: block;
+    margin-left: 0 !important;
     height: 100px;
     color: $text-color !important;
     text-transform: uppercase !important;

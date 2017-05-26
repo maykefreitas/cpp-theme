@@ -23,6 +23,7 @@ $guideline-color: darken($border-color-base, 5%);
 
     > .list-group-item {
       padding-right: 0;
+      color: $text-color;
 
       &.module {
         font-weight: 600;

@@ -1,15 +1,12 @@
 <div class="product-page page">
-  <header class="product-header page-header">
-    <div class="container">
-      <h2 class="title">{{ product.title }}</h2>
-      <h4 class="subtitle">{{ product.subtitle }}</h4>
-
-      <div class="row">
-        <div class="col-md-8">
+  <header class="page-hero product-hero" style="background-image: url({{ 'product-hero.png'  | asset_url }})">
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-badge">
           <div class="image">
             {% if product.video_cover %}
               {% media_player media: product.video_cover %}
-            {% elsif product.logo %}
+              {% elsif product.logo %}
               {% image, src: product.logo, alt: product.title %}
             {% else %}
               {% assign placeholder = 'missing-product-logo.png' | asset_url %}
@@ -17,44 +14,126 @@
             {% endif %}
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="product-info">
-            {% include 'product/buy' %}
-          </div>
+
+        <div class="hero-info">
+          <h1 class="title">{{ product.title }}</h1>
+          <h4 class="subtitle">{{ product.subtitle }}</h4>
+
+          {% include 'product/buy' %}
         </div>
       </div>
     </div>
   </header>
 
-  <div class="product-body">
-    <div class="container page-container">
-      <div class="row">
-        <div class="col-md-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-4">
+        {% for topic in product.topics %}
+          {% assign topic_title = topic.title | downcase %}
+          {% if topic_title == 'tarja' %}
+            {% assign banner = topic.description %}
+          {% endif %}
+        {% endfor %}
+
+        {% if banner %}
+          <div class="product-banner">{{ banner }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <ul class="product-nav js-product-nav">
           {% if product.description %}
-            <article class="product-description">
-              {{ product.description }}
-            </article>
+            <li><a href="#introduction">Introdução</a></li>
           {% endif %}
 
-          <div class="product-content">
-            <h3 class="title">{{ 'product.resource.course' | t }}</h3>
+          <li><a href="#content">Conteúdo do Curso</a></li>
+          <li><a href="#teachers">Instrutores</a></li>
 
-            <div class="landing-modules">
-              {% include 'product/content-course', lesson_actions: false %}
-              {% include 'product/content-path' %}
+          {% for topic in product.topics %}
+            {% assign topic_title = topic.title | downcase %}
+            {% if topic_title != 'tarja' %}
+              <li><a href="#{{ topic.id }}">{{ topic.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        <div class="product-contact">
+          <h4 class="title">Alguma dúvida?</h4>
+          <p>Entre em contato conosco</p>
+          <br>
+          <p>Telefone: (11) 2306-8408</p>
+          <p>E-mail: sac@cursosparapolicia.com.br</p>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        {% if product.description %}
+          <div data-target="introduction" class="product-content product-introduction js-product-content">
+            <h2 class="title">Introdução</h2>
+
+            {{ product.description }}
+          </div>
+        {% endif %}
+
+        <div data-target="content" class="product-content js-product-content">
+          <h2 class="title">Conteúdo do Curso</h2>
+
+          {% include 'product/content-course', lesson_actions: false %}
+          {% include 'product/content-path' %}
+        </div>
+
+        <div data-target="teachers" class="product-content product-teachers js-product-content">
+          <h2 class="title">Instrutores</h2>
+
+          <div class="panel-group"
+               id="teachers-accordion"
+               role="tablist"
+               aria-multiselectable="true">
+            {% for teacher in product.class_teachers %}
+              <div class="panel panel-default">
+                <div class="panel-heading"
+                     role="tab"
+                     id="heading-{{ teacher.id }}">
+                  <div class="panel-title">
+                    <a role="button"
+                       data-toggle="collapse"
+                       data-parent="#accordion"
+                       href="#collapse-{{ teacher.id }}"
+                       aria-expanded="true"
+                       aria-controls="collapse-{{ teacher.id }}">
+                      {{ teacher.full_name }}
+                    </a>
+                  </div>
+                </div>
+                <div id="collapse-{{ teacher.id }}"
+                     class="panel-collapse collapse {% if forloop.index == 1 %}in{% endif %}"
+                     role="tabpanel"
+                     aria-labelledby="heading-{{ teacher.id }}">
+                  <div class="panel-body">
+                    {% if teacher.photo_url %}
+                      <div class="teacher-photo">
+                        <img src="{{ teacher.photo_url }}" alt="{{ teacher.full_name }}">
+                      </div>
+                    {% endif %}
+
+                    <div class="teacher-about">{{ teacher.about }}</div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        {% for topic in product.topics %}
+          {% assign topic_title = topic.title | downcase %}
+          {% if topic_title != 'tarja' %}
+            <div data-target="{{ topic.id }}" class="product-content js-product-content">
+              <h2 class="title">{{ topic.title }}</h2>
+              <div>{{ topic.description }}</div>
             </div>
-          </div>
-
-          <div class="text-center jumbotron">
-            <h2 class="title">{{ settings.style.product.footer_text }}</h2>
-            <br>
-            {% include 'product/buy' %}
-          </div>
-        </div>
-        <div class="col-md-4">
-          {% include 'product/teachers' %}
-          {% include 'product/product-topics' %}
-        </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>

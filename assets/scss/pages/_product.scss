@@ -1,101 +1,212 @@
 .product-page {
-  .navbar {
-    border-bottom: none;
-  }
+  $border-color: lighten($body-bg, 75%);
+  $product-text-color: darken($light, 10%);
 
-  .product-header {
-    margin-bottom: $padding-large-vertical * 4;
-    padding: $padding-large-vertical * 4 0;
-    padding-bottom: $padding-large-vertical * 8;
+  padding-bottom: $padding-large-vertical * 8;
 
-    .title {
-      margin-bottom: $padding-large-vertical;
-    }
+  .product-hero {
+    .hero-badge {
+      .image {
+        @include translate(0, -50%);
 
-    .subtitle {
-      margin-bottom: $padding-large-vertical * 4;
-    }
-
-    .image {
-      margin-bottom: $padding-large-vertical * 2;
-      text-align: right;
-
-      img {
-        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 0;
         width: 100%;
-        height: auto;
-      }
-    }
 
-    .product-info {
-      padding-bottom: $padding-large-horizontal * 2;
-      text-align: left;
+        img {
+          width: 100%;
+          height: auto;
+        }
 
-      .checklist {
-        margin-top: $padding-large-vertical * 4;
-        padding: 0;
+        .video-player {
+          @extend .embed-responsive;
+          @extend .embed-responsive-16by9;
 
-        .check {
-          margin: 0;
-          padding: $padding-large-vertical 0;
-          list-style: none;
-          text-align: left;
-          font-size: 18px;
-
-          i {
-            margin-right: 5px;
+          iframe {
+            @extend .embed-responsive-item;
           }
         }
       }
     }
-  }
 
-  .enroll {
-    .price {
-      margin-bottom: $padding-large-vertical;
-      font-weight: 600;
-      font-size: 36px;
-    }
-  }
+    .hero-info {
+      $color: lighten($text-color, 10%);
 
-  .product-teachers {
-    .teachers-list {
-      .teacher-item {
-        margin-bottom: $padding-large-vertical * 4;
-        padding: 0 $padding-large-horizontal;
+      position: absolute;
+      top: 150px;
+      bottom: 30px;
+      left: 335px;
+      padding: 0 60px;
+      max-width: 615px;
 
-        .avatar {
-          margin-top: 0;
-          margin-bottom: 0;
+      .title {
+        margin: 0;
+        margin-bottom: $padding-large-vertical;
+        color: $color;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1;
+      }
+
+      .subtitle {
+        margin: 0;
+        margin-bottom: $padding-large-vertical;
+        color: $color;
+        font-size: 22px;
+        line-height: 1;
+      }
+
+      .enroll {
+        max-width: 320px;
+
+        .price {
+          margin: 0;
+          color: $color;
+          font-size: 42px;
         }
 
-        .title {
-          margin-top: 5px;
-          margin-bottom: 5px;
-        }
-
-        .description {
-          margin-top: $padding-large-vertical * 2;
+        .btn,
+        .btn-group {
+          display: block;
+          width: 100%;
         }
       }
     }
   }
 
-  .product-content {
-    margin-top: $padding-large-vertical * 8;
-    margin-bottom: $padding-large-vertical * 8;
+  .product-nav {
+    margin: 0;
+    padding: 25px 0;
+    max-width: 320px;
+    border-top: 1px solid $border-color;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 5px 0;
+        color: $product-text-color;
+        text-decoration: none;
+        font-size: 17px;
+
+        &.active {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .product-contact {
+    padding: 25px 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    color: $product-text-color;
 
     .title {
       margin-top: 0;
-      margin-bottom: $padding-large-vertical * 4;
+      margin-bottom: 0;
+      color: $product-text-color;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .product-content {
+    display: none;
+    margin: 0 auto;
+    max-width: 600px;
+    color: $product-text-color;
+
+    &.active {
+      display: block;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-top: 0;
+      color: $product-text-color;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 24px;
       line-height: 1;
     }
   }
 
-  .jumbotron {
-    background-color: $light;
+  .product-teachers {
+    .panel {
+      background-color: transparent;
 
-    h2 {
+      .panel-heading {
+        border-color: $border-color;
+        background-color: transparent;
+
+        a {
+          color: $product-text-color;
+        }
+      }
+    }
+
+    .teacher-photo {
+      float: left;
+      margin-right: 15px;
+      max-width: 128px;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .product-banner {
+    $bg: #c90e1e;
+
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: $padding-large-vertical * 8;
+    padding: 6px 10px;
+    max-width: 550px;
+    background-color: $bg;
+    color: rgba($light, .8);
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -19px;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+      border-width: 19px;
+      content: ' ';
+      pointer-events: none;
+    }
+
+    &:before {
+      right: 100%;
+      border-right-color: $bg;
+    }
+
+    &:after {
+      left: 100%;
+      border-left-color: $bg;
+    }
+
+    p {
       margin: 0;
     }
   }

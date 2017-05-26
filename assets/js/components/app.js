@@ -59,6 +59,7 @@
       app.bindBlazy();
       app.bindOpenOnLoad();
       app.bindHome();
+      app.bindProduct();
       app.bindMasks();
       app.bindTooltips();
       app.bindReadMore();
