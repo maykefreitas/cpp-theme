@@ -5,6 +5,9 @@
   padding-bottom: $padding-large-vertical * 8;
 
   .product-hero {
+    min-height: 320px;
+    height: auto;
+
     .hero-badge {
       .image {
         @include translate(0, -50%);
@@ -32,13 +35,16 @@
 
     .hero-info {
       $color: lighten($text-color, 10%);
+      @include breakpoint(sm) {
+        position: absolute;
+        top: 150px;
+        bottom: 30px;
+        left: 335px;
+        padding: 0 60px;
+        max-width: 615px;
+      }
 
-      position: absolute;
-      top: 150px;
-      bottom: 30px;
-      left: 335px;
-      padding: 0 60px;
-      max-width: 615px;
+      padding: $padding-large-vertical * 8 15px;
 
       .title {
         margin: 0;
@@ -77,10 +83,15 @@
   }
 
   .product-nav {
+    @include breakpoint(sm) {
+      border-bottom: none;
+    }
+
     margin: 0;
     padding: 25px 0;
     max-width: 320px;
     border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
     list-style: none;
 
     li {
@@ -99,6 +110,11 @@
   }
 
   .product-contact {
+    @include breakpoint(sm) {
+      display: block;
+    }
+
+    display: none;
     padding: 25px 0;
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
@@ -117,8 +133,13 @@
   }
 
   .product-content {
+    @include breakpoint(sm) {
+      margin-top: 0;
+    }
+
     display: none;
     margin: 0 auto;
+    margin-top: $padding-large-vertical * 4;
     max-width: 600px;
     color: $product-text-color;
 
@@ -185,8 +206,13 @@
 
     &:before,
     &:after {
+      @include breakpoint(sm) {
+        display: block;
+      }
+
       position: absolute;
       top: 50%;
+      display: none;
       margin-top: -19px;
       width: 0;
       height: 0;
