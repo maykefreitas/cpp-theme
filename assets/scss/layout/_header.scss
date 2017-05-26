@@ -1,11 +1,14 @@
 header.navbar {
   @include box-shadow(none);
   @include transition(.2s ease);
+  @include breakpoint(sm) {
+    background-color: transparent;
+  }
 
   margin: 0;
   border: none;
   border-bottom: 1px solid transparent;
-  background-color: transparent;
+  background-color: $light;
 
   .navbar-brand {
     display: block;
@@ -19,9 +22,16 @@ header.navbar {
       padding: 18px 0;
 
       img {
-        width: auto;
-        height: 100%;
-        vertical-align: middle;
+        @include breakpoint(sm) {
+          max-width: none;
+          width: auto;
+          height: 100%;
+          vertical-align: middle;
+        }
+
+        max-width: 230px;
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -33,8 +43,11 @@ header.navbar {
     font-size: 14px;
 
     label {
-      margin-right: 5px;
-      margin-left: 15px;
+      @include breakpoint(sm) {
+        margin-right: 5px;
+        margin-left: 15px;
+      }
+
       font-weight: 400;
       font-size: 14px;
     }
@@ -46,10 +59,17 @@ header.navbar {
     }
 
     .btn {
-      margin-left: 10px;
+      @include breakpoint(sm) {
+        margin-left: 10px;
+      }
     }
 
     .separator {
+      @include breakpoint(sm) {
+        display: inline-block;
+      }
+
+      display: none;
       margin: 0 15px;
       height: 50px;
       border-right: 1px solid darken($border-color-base, 20%);
@@ -68,13 +88,24 @@ header.navbar {
       }
     }
   }
+
+  .navbar-collapse {
+    background-color: $light;
+  }
 }
 
-.home-page,
-.category-page,
-.product-page {
-  header.navbar {
-    @extend .navbar-fixed-top;
+@include breakpoint(sm) {
+  .home-page,
+  .category-page,
+  .product-page {
+    header.navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: $zindex-navbar-fixed;
+      border-width: 0 0 1px;
+    }
   }
 }
 

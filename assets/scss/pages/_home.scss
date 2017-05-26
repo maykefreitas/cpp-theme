@@ -1,10 +1,6 @@
 .home-page {
   padding: 0;
 
-  .navbar {
-    border-bottom: none;
-  }
-
   .home-hero {
     .hero-content {
       .hero-slider {
@@ -44,10 +40,14 @@
     li {
       a {
         @include ellipsis();
+        @include breakpoint(sm) {
+          text-align: left;
+        }
 
         display: block;
         padding: 5px 0;
         color: $color;
+        text-align: center;
         font-size: 16px;
       }
     }
@@ -59,8 +59,13 @@
 
     li {
       a {
+        @include breakpoint(sm) {
+          text-align: left;
+        }
+
         display: block;
         margin-bottom: 35px;
+        text-align: center;
 
         img {
           max-width: 100%;

@@ -36,9 +36,13 @@
   }
 
   .page-hero {
+    @include breakpoint(sm) {
+      height: 384px;
+    }
+
     position: relative;
     margin-bottom: $padding-large-vertical * 7;
-    height: 384px;
+    height: 320px;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -61,13 +65,18 @@
       }
 
       .hero-badge {
+        @include breakpoint(sm) {
+          left: 15px;
+          height: calc(100% - 100px);
+        }
+
         position: absolute;
         bottom: 0;
-        left: 15px;
+        left: 0;
         min-height: 120px;
         max-width: 320px;
         width: 100%;
-        height: calc(100% - 100px);
+        height: 100%;
         background-color: $brand-primary;
 
         &:after {
