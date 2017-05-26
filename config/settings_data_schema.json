@@ -543,18 +543,11 @@
     "id": "5",
     "settings": [
       {
-        "key": "view.home.enable_categories",
-        "type": "checkbox",
-        "templateOptions": {
-          "label": "Habilitar Categorias na Página Inicial"
-        }
-      },
-      {
-        "template": "<h3>Categorias</h3>"
+        "template": "<h3>Informações Extras para Categorias</h3>"
       },
       {
         "type": "repeatSection",
-        "key": "view.home.categories",
+        "key": "view.categories",
         "templateOptions": {
           "btnText": "Adicionar Nova Categoria",
           "fields": [
@@ -567,10 +560,10 @@
               }
             },
             {
-              "key": "order",
+              "key": "cover",
               "type": "input",
               "templateOptions": {
-                "label": "Ordem",
+                "label": "Capa",
                 "required": false
               }
             }

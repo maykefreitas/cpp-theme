@@ -1,4 +1,18 @@
 .categories-page {
+  .category-hero {
+    text-align: center;
+
+    img {
+      @include translate(-50%, 0);
+
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
   .category-list {
     margin-bottom: $padding-large-vertical * 8;
 
@@ -12,12 +26,19 @@
         @include user-select(none);
 
         display: block;
+        padding: 7px 0;
+        border-right: none;
+        border-left: none;
+        background-color: transparent;
         cursor: default;
 
         &.has-children {
+          @include clearfix();
+
           .toggle-btn {
+            float: right;
             margin-top: 0;
-            margin-right: 10px;
+            margin-right: 0;
             border-color: transparent;
 
             &,
@@ -30,14 +51,52 @@
             }
 
             .icon {
+              @include rotate(-90deg);
+
               width: auto;
               font-size: 14px;
+
+              .caret {
+                $caret-width-base: 5px;
+
+                border-top: $caret-width-base dashed;
+                border-top: $caret-width-base solid;
+                border-right: $caret-width-base solid transparent;
+                border-left: $caret-width-base solid transparent;
+                color: $light;
+              }
             }
           }
 
           .list-group {
             margin-top: $padding-large-vertical;
             margin-left: 7px;
+          }
+
+          .list-group {
+            margin-left: 0;
+
+            .list-group-item {
+              font-size: 14px;
+
+              .category-title {
+                line-height: 2.4;
+              }
+
+              &.has-children {
+                .toggle-btn {
+                  float: left;
+                  margin-right: 5px;
+                }
+
+                .list-group {
+                  .list-group-item {
+                    padding-left: 50px;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
           }
 
           > .category-info {
@@ -47,7 +106,7 @@
           &.expanded {
             > .toggle-btn {
               .icon {
-                @include rotate(180deg);
+                @include rotate(0);
               }
             }
           }
@@ -61,31 +120,10 @@
           width: 100%;
           cursor: default;
 
-          .left,
           .center {
             display: inline-block;
             vertical-align: middle;
             font-weight: normal;
-          }
-
-          .left {
-            text-align: left;
-
-            i {
-              position: relative;
-
-              &:after {
-                position: absolute;
-                top: 50%;
-                left: -12px;
-                z-index: 100;
-                display: block;
-                width: 10px;
-                height: 1px;
-                border-bottom: 1px dashed $guideline-color;
-                content: '';
-              }
-            }
           }
 
           .center {
@@ -100,6 +138,7 @@
             display: inline-block;
             width: 100%;
             height: 25px;
+            color: $light;
             vertical-align: middle;
 
             &:hover {
@@ -108,14 +147,12 @@
                 top: -1px;
                 z-index: 1000;
                 padding: 2px 10px 2px 0;
-                background-color: rgba($light, .9);
               }
             }
           }
         }
 
         &.current {
-          border-color: transparent;
           background-color: transparent;
           font-weight: 600;
 
@@ -134,30 +171,51 @@
           .list-group {
             position: relative;
 
-            &:after {
-              position: absolute;
-              bottom: 0;
-              left: -1.5px;
-              display: block;
-              width: 5px;
-              height: 5px;
-              border-radius: 100%;
-              background-color: $guideline-color;
-              content: '';
-            }
-
             .list-group-item {
               padding-right: 0;
               border: none;
-              border-left: 1px dashed $guideline-color;
               border-radius: 0;
             }
           }
         }
 
         &.current {
-          border-color: $list-group-border;
-          background-color: $list-group-bg;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .category-breadcrumbs {
+    $color: darken($light, 10%);
+
+    margin: 0;
+    margin-bottom: $padding-large-vertical * 4;
+    padding: 0;
+    padding-left: 20px;
+    list-style: none;
+    line-height: 1;
+
+    li {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1;
+
+      .separator {
+        display: inline-block;
+        margin: 0 3px;
+        color: $color;
+      }
+
+      a,
+      span {
+        color: $color;
+        line-height: 1;
+      }
+
+      a {
+        &:hover {
+          color: $light;
         }
       }
     }

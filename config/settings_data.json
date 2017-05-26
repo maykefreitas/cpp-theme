@@ -84,7 +84,25 @@
           "instagram": "https://instagram.com",
           "twitter": "https://twitter.com",
           "pinterest": "https://pinterest.com"
-        }
+        },
+        "categories": [
+          {
+            "slug": "ruby",
+            "cover": "https://unsplash.it/942/258?image=1"
+          },
+          {
+            "slug": "basic",
+            "cover": "https://unsplash.it/942/258?image=2"
+          },
+          {
+            "slug": "advanced",
+            "cover": "https://unsplash.it/942/258?image=3"
+          },
+          {
+            "slug": "category_1_subcategory_1_subcategory",
+            "cover": "https://unsplash.it/942/258?image=4"
+          }
+        ]
       }
     }
   }

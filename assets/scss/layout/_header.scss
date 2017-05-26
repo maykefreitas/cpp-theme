@@ -1,9 +1,10 @@
 header.navbar {
   @include box-shadow(none);
+  @include transition(.2s ease);
 
   margin: 0;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, .15);
+  border-bottom: 1px solid transparent;
   background-color: transparent;
 
   .navbar-brand {
@@ -80,6 +81,7 @@ header.navbar {
   header.navbar {
     @include box-shadow(0 1px 4px rgba(0, 0, 0, .06));
 
+    border-bottom-color: rgba(0, 0, 0, .15);
     background-color: $light;
   }
 }

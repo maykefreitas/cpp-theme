@@ -2,12 +2,6 @@
   min-height: 640px;
   background-color: $body-bg;
 
-  &.home-page,
-  &.category-page,
-  &.product-page {
-    background-color: $dark;
-  }
-
   .page-container {
     padding-bottom: $padding-large-vertical * 8;
   }
@@ -43,7 +37,7 @@
 
   .page-hero {
     position: relative;
-    margin-bottom: $padding-large-vertical * 8;
+    margin-bottom: $padding-large-vertical * 7;
     height: 384px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,6 +84,20 @@
         }
       }
     }
+  }
+}
+
+.home-page,
+.category-page,
+.product-page {
+  background-color: $dark;
+
+  .page {
+    background-color: transparent;
+  }
+
+  .product-list {
+    background-color: transparent;
   }
 }
 

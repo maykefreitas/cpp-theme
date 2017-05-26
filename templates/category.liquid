@@ -1,6 +1,22 @@
 <div class="categories-page page">
+  <header class="page-hero category-hero" style="background-image: url({{ 'category-hero.png'  | asset_url }})">
+    <div class="hero-content">
+      <div class="container">
+        {% for category_extra in settings.view.categories %}
+          {% if category_extra.slug == category.slug %}
+            {% assign category_cover = category_extra.cover %}
+          {% endif %}
+        {% endfor %}
+
+        {% if category_cover %}
+          {% image, class: "category-cover", src: category_cover, alt: category.title %}
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
   <div class="container">
-    <h2 class="page-title">{{ 'categories.categories' | t }}</h2>
+    {% include 'social-links' %}
 
     <div class="row">
       <div class="col-sm-4">
@@ -8,34 +24,31 @@
       </div>
 
       <div class="col-sm-8">
-        <div class="category-products-form">
-          {% capture form_content %}
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon no-background"><i class="icon-magnifier"></i></span>
-              <input id="filter-title-input" name="title" class="form-control"
-                     type="text" value="{{ params.title }}" placeholder="{{ 'category.filter_by_product' | t }}">
-              <span class="input-group-btn">
-                <input type="submit" value="{{ 'general.search' | t }}" class="btn btn-default">
-              </span>
-            </div>
-          </div>
-          {% endcapture %}
+        {% if root_category %}
+          <ul class="category-breadcrumbs">
+            <li>
+              <a href="/categories/{{ root_category.slug }}">
+                {{ root_category.title }}
+              </a>
+            </li>
 
-          {% if category.parent_category_id == nil %}
-            {% form 'root-category-search-product', root_category: category.slug %}
-            {{ form_content }}
-            {% endform %}
-            {% elsif root_category and parent_category == nil %}
-            {% form 'parent-category-search-product', root_category: root_category.slug, parent_category: category.slug %}
-            {{ form_content }}
-            {% endform %}
-          {% else %}
-            {% form 'category-search-product', root_category: root_category.slug, parent_category: parent_category.slug, category: category.slug %}
-            {{ form_content }}
-            {% endform %}
-          {% endif %}
-        </div>
+            {% if parent_category %}
+              <li><span class="separator">></span></li>
+              <li>
+                <a href="/categories/{{ root_category.slug }}/subcategories/{{ parent_category.slug }}">
+                  {{ parent_category.title }}
+                </a>
+              </li>
+            {% endif %}
+
+            <li><span class="separator">></span></li>
+            <li>
+              <span>
+                {{ category.title }}
+              </span>
+            </li>
+          </ul>
+        {% endif %}
 
         {% if products.size > 0 %}
           <div class="product-list">
