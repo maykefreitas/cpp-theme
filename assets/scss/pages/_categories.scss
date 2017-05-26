@@ -1,13 +1,21 @@
 .categories-page {
   .category-hero {
+    @include breakpoint(sm) {
+      height: 384px;
+    }
+
+    height: auto;
     text-align: center;
 
     img {
-      @include translate(-50%, 0);
+      @include breakpoint(sm) {
+        @include translate(-50%, 0);
 
-      position: absolute;
-      bottom: 25px;
-      left: 50%;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+      }
+
       max-width: 100%;
       height: auto;
     }
@@ -188,7 +196,11 @@
 
   .category-breadcrumbs {
     $color: darken($light, 10%);
+    @include breakpoint(sm) {
+      display: block;
+    }
 
+    display: none;
     margin: 0;
     margin-bottom: $padding-large-vertical * 4;
     padding: 0;
