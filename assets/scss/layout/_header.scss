@@ -96,6 +96,172 @@ header.navbar {
 
     background-color: $light;
   }
+
+  .navbar-nav {
+    a {
+      font-weight: 600;
+      font-size: 16px;
+
+      i {
+        margin-right: 2px;
+      }
+    }
+
+    li {
+      &.mobile {
+        @include breakpoint($grid-float-breakpoint-max) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    @include breakpoint($grid-float-breakpoint-max) {
+      display: inline-block;
+    }
+
+    display: none;
+
+    .dropdown-toggle {
+      @include breakpoint($grid-float-breakpoint) {
+        display: block;
+        padding: 0 !important;
+      }
+
+      display: none;
+      padding: $padding-large-vertical * 2 !important;
+      padding-right: 15px !important;
+      padding-left: 35px !important;
+      line-height: 100px;
+
+      .avatar {
+        float: right;
+        margin: 25px 0 25px 12px;
+      }
+
+      .icon {
+        font-size: 12px;
+      }
+    }
+
+    .dropdown-menu {
+      @include translate(0, 0);
+      @include transition(.2s ease);
+      @include breakpoint($grid-float-breakpoint-max) {
+        display: block;
+        visibility: hidden;
+        border-radius: $border-radius-base + 2;
+        opacity: 0;
+        pointer-events: none;
+
+        &:before {
+          $size: 18px;
+
+          top: - ($size / 2) - 1;
+          right: 69px;
+          display: block;
+          width: $size;
+          height: $size;
+          border-top-left-radius: $border-radius-base + 2;
+          background-color: $panel-default-heading-bg;
+        }
+      }
+
+      top: 150%;
+      right: -15px;
+      padding-top: 0;
+
+      &:before {
+        border: none;
+      }
+
+      li {
+        a {
+          padding-top: 13px;
+          padding-bottom: 13px;
+          font-weight: normal;
+          line-height: 1;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+
+        &.user-header-list-item {
+          @include breakpoint($grid-float-breakpoint-max) {
+            display: block;
+          }
+
+          display: none;
+        }
+
+        .user-header {
+          @include clearfix;
+
+          padding: 8px 15px;
+          border-bottom: 1px solid $border-color-base;
+          background-color: $panel-default-heading-bg;
+          vertical-align: middle;
+          line-height: 2.3;
+
+          .avatar {
+            @include box-shadow(none);
+
+            margin: 0;
+            width: 38px;
+            height: 38px;
+          }
+
+          .caption {
+            display: inline-block;
+            margin-left: 10px;
+            max-width: 110px;
+            height: auto;
+            vertical-align: middle;
+            font-size: 14px;
+
+            .logged-user,
+            .logged-user-email {
+              display: block;
+              line-height: 1;
+            }
+
+            .logged-user {
+              @include ellipsis();
+
+              margin-bottom: 3px;
+              max-width: 110px;
+              color: darken($text-color, 5%);
+            }
+
+            .logged-user-email {
+              color: $text-muted;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover,
+    &.open {
+      .avatar {
+        @include box-shadow(0 0 0 3px $brand-primary);
+      }
+    }
+
+    &.open {
+      @include breakpoint($grid-float-breakpoint-max) {
+        .dropdown-menu {
+          top: 90%;
+          visibility: visible;
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint(sm) {
