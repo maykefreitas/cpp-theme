@@ -13,6 +13,20 @@
         left: 335px;
         max-width: 615px;
       }
+
+      .hero-badge {
+        padding-top: 15px;
+      }
+
+      .hero-videos {
+        iframe,
+        embed {
+          @extend .embed-responsive-item;
+        }
+
+        .videos-nav {
+        }
+      }
     }
   }
 
@@ -57,15 +71,17 @@
   }
 
   .home-product-list {
-    .col {
-      text-align: right;
+    @include breakpoint(sm) {
+      .col {
+        text-align: right;
 
-      .product-card {
-        display: inline-block;
-        margin-right: 0;
-        margin-left: 0;
-        width: 100%;
-        text-align: left;
+        .product-card {
+          display: inline-block;
+          margin-right: auto;
+          margin-left: 0;
+          width: 100%;
+          text-align: left;
+        }
       }
     }
   }

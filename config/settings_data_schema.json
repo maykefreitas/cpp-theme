@@ -539,8 +539,42 @@
     ]
   },
   {
-    "name": "Categorias",
+    "name": "Home Page Videos",
     "id": "5",
+    "settings": [
+      {
+        "template": "<h3>Vídeos da Home Page</h3>"
+      },
+      {
+        "type": "repeatSection",
+        "key": "view.home.videos",
+        "templateOptions": {
+          "btnText": "Adicionar Novo Vídeo",
+          "fields": [
+            {
+              "key": "html",
+              "type": "input",
+              "templateOptions": {
+                "label": "Código Embed ou Iframe",
+                "required": true
+              }
+            },
+            {
+              "key": "thumbnail",
+              "type": "input",
+              "templateOptions": {
+                "label": "Miniatura",
+                "required": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Categorias",
+    "id": "6",
     "settings": [
       {
         "template": "<h3>Informações Extras para Categorias</h3>"
@@ -574,7 +608,7 @@
   },
   {
     "name": "Produto",
-    "id": "6",
+    "id": "7",
     "settings": [
       {
         "template": "<h3>Header</h3>"
@@ -612,7 +646,7 @@
   },
   {
     "name": "Redes Sociais",
-    "id": "7",
+    "id": "8",
     "settings": [
       {
         "key": "view.social.facebook",

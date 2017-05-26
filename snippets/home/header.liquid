@@ -1,7 +1,26 @@
 <header class="page-hero home-hero" style="background-image: url({{ 'home-hero.png'  | asset_url }})">
   <div class="hero-content">
     <div class="container">
-      <div class="hero-badge"></div>
+      <div class="hero-badge">
+        {% if settings.view.home.videos.size > 0 %}
+          <div class="hero-videos js-hero-videos">
+            <div class="active-video">
+              <div class="js-video-container embed-responsive embed-responsive-16by9">
+                {{ settings.view.home.videos.first.html }}
+              </div>
+            </div>
+
+            <div class="videos-nav js-videos-nav owl-carousel owl-theme js-hero-videos-slider">
+              {% for video in settings.view.home.videos %}
+                <a href="#" data-html="{{ video.html | escape }}">
+                  <img src="{{ video.thumbnail }}" alt="">
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
       <div class="js-hero-slider hero-slider owl-carousel owl-theme">
         {% for slide in settings.view.home.slides %}
           <img src="{{ slide.image }}" alt="">

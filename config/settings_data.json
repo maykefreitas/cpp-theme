@@ -77,6 +77,24 @@
               "image": "https://unsplash.it/168/168?image=6",
               "url": "https://instagram.com"
             }
+          ],
+          "videos": [
+            {
+              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/E5ln4uR4TwQ\" frameborder=\"0\" allowfullscreen><\/iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+            },
+            {
+              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/IVx6ZlksMJw\" frameborder=\"0\" allowfullscreen><\/iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+            },
+            {
+              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/0vrdgDdPApQ\" frameborder=\"0\" allowfullscreen><\/iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+            },
+            {
+              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/iNJdPyoqt8U\" frameborder=\"0\" allowfullscreen><\/iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+            }
           ]
         },
         "social": {
