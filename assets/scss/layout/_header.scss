@@ -78,11 +78,12 @@ header.navbar {
     .links {
       p {
         margin: 0;
-        line-height: 1.4;
+        line-height: 1.2;
 
         a {
           padding: 0 !important;
           color: $text-color;
+          font-weight: 400;
           font-size: 12px;
         }
       }

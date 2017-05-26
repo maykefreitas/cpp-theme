@@ -7,7 +7,7 @@
       loop: true,
       autoplay: true,
       autoplayTimeout: 7000,
-      dots: false,
+      dots: true,
       nav: false
     });
 

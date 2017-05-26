@@ -1,2 +1,9 @@
 @import '../../../bower_components/owl.carousel/src/scss/owl.carousel';
 @import '../../../bower_components/owl.carousel/src/scss/owl.theme.default';
+
+.owl-theme .owl-dots .owl-dot span {
+  margin-right: 4px;
+  margin-left: 4px;
+  width: 8px;
+  height: 8px;
+}

@@ -607,46 +607,8 @@
     ]
   },
   {
-    "name": "Produto",
-    "id": "7",
-    "settings": [
-      {
-        "template": "<h3>Header</h3>"
-      },
-      {
-        "key": "style.product.header_bg",
-        "type": "color",
-        "templateOptions": {
-          "label": "Cor de Fundo"
-        }
-      },
-      {
-        "key": "style.product.header_text_color",
-        "type": "color",
-        "templateOptions": {
-          "label": "Cor do texto"
-        }
-      },
-      {
-        "key": "style.product.header_background_image",
-        "type": "input",
-        "templateOptions": {
-          "label": "Imagem de fundo",
-          "placeholder": "ex: https://host.com/header.jpg"
-        }
-      },
-      {
-        "key": "style.product.footer_text",
-        "type": "input",
-        "templateOptions": {
-          "label": "Título após descrição"
-        }
-      }
-    ]
-  },
-  {
     "name": "Redes Sociais",
-    "id": "8",
+    "id": "7",
     "settings": [
       {
         "key": "view.social.facebook",
