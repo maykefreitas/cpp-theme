@@ -37,7 +37,7 @@
 
   .page-hero {
     @include breakpoint(sm) {
-      height: 384px;
+      height: 420px;
     }
 
     position: relative;
@@ -78,10 +78,12 @@
           position: absolute;
           bottom: 0;
           left: 15px;
-          height: calc(100% - 100px);
+          margin: 0;
+          max-height: calc(100% - 100px);
         }
 
         position: relative;
+        margin: 0 auto;
         min-height: 320px;
         max-width: 320px;
         width: 100%;

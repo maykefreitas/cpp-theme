@@ -90,6 +90,10 @@ header.navbar {
   }
 
   .navbar-collapse {
+    @include breakpoint($grid-float-breakpoint) {
+      background-color: transparent;
+    }
+
     background-color: $light;
   }
 }

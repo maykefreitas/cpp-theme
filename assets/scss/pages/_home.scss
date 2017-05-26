@@ -4,9 +4,14 @@
   .home-hero {
     .hero-content {
       .hero-slider {
+        @include breakpoint(md) {
+          display: block;
+        }
+
         position: absolute;
         bottom: 17px;
         left: 335px;
+        display: none;
         max-width: 615px;
       }
 

@@ -5,6 +5,10 @@
   padding-bottom: $padding-large-vertical * 8;
 
   .product-hero {
+    @include breakpoint(sm) {
+      height: 420px;
+    }
+
     min-height: 320px;
     height: auto;
 
@@ -206,7 +210,7 @@
 
     &:before,
     &:after {
-      @include breakpoint(sm) {
+      @include breakpoint(md) {
         display: block;
       }
 
