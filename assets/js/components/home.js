@@ -27,6 +27,11 @@
 
       $('.js-hero-videos .js-video-container').html($html);
     });
+
+    setTimeout(function () {
+      $('.js-hero-slider').css({opacity: 1});
+      $('.js-hero-videos').css({opacity: 1});
+    }, 500);
   }
 
 })();

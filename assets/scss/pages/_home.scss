@@ -4,6 +4,7 @@
   .home-hero {
     .hero-content {
       .hero-slider {
+        @include transition(opacity .2s ease);
         @include breakpoint(md) {
           display: block;
         }
@@ -13,6 +14,7 @@
         left: 335px;
         display: none;
         max-width: 615px;
+        opacity: 0;
       }
 
       .hero-badge {
@@ -20,6 +22,10 @@
       }
 
       .hero-videos {
+        @include transition(opacity .2s ease);
+
+        opacity: 0;
+
         iframe,
         embed {
           @extend .embed-responsive-item;
