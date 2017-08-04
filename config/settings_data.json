@@ -46,48 +46,62 @@
         "home": {
           "slides": [
             {
-              "image": "https://unsplash.it/615/256?image=1"
+              "image": "https://edools-3-production.s3.amazonaws.com/org-6499%2Fschool-6516%2F75b6a30a5aa0a403360e13e027f15dd2%2FBANNER+HOME+1.jpg",
+              "$$hashKey": "object:436"
             },
             {
-              "image": "https://unsplash.it/615/256?image=2"
+              "image": "https://edools-3-production.s3.amazonaws.com/org-6499%2Fschool-6516%2F7aa7314bf9031351f109ba4aaaab255e%2FBANNER+HOME+3.jpg",
+              "$$hashKey": "object:437"
             },
             {
-              "image": "https://unsplash.it/615/256?image=3"
+              "image": "https://edools-3-production.s3.amazonaws.com/org-6499%2Fschool-6516%2Fc6818b3a0348324c395e6f60ba4487b0%2FBANNER+HOME+2.jpg",
+              "$$hashKey": "object:719"
+            },
+            {
+              "image": "https://edools-3-production.s3.amazonaws.com/org-6499%2Fschool-6516%2F90d23aefdf1d76267be210de0bd15752%2FBANNER+1+LUGAR.jpg",
+              "$$hashKey": "object:1728"
             }
           ],
           "partners": [
             {
               "name": "Parceiro 1",
               "image": "https://unsplash.it/168/168?image=4",
-              "url": "https://google.com"
+              "url": "https://google.com",
+              "$$hashKey": "object:453"
             },
             {
               "name": "Parceiro 2",
               "image": "https://unsplash.it/168/168?image=5",
-              "url": "https://facebook.com"
+              "url": "https://facebook.com",
+              "$$hashKey": "object:454"
             },
             {
               "name": "Parceiro 3",
               "image": "https://unsplash.it/168/168?image=6",
-              "url": "https://instagram.com"
+              "url": "https://instagram.com",
+              "$$hashKey": "object:455"
             }
           ],
           "videos": [
             {
-              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/E5ln4uR4TwQ\" frameborder=\"0\" allowfullscreen><\/iframe>",
-              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+              "html": " <iframe allowfullscreen webkitallowfullscreen mozallowfullscreen width=\"640\" height=\"360\" src=\"https://fast.player.liquidplatform.com/pApiv2/embed/ad9be96c2fb14b26a3145308c5eacb10/7817ac46a0a073ea32f6eee9c31f1c0d\" scrolling=\"no\" frameborder=\"0\"></iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png",
+              "$$hashKey": "object:498"
             },
             {
-              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/IVx6ZlksMJw\" frameborder=\"0\" allowfullscreen><\/iframe>",
-              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+              "html": "<iframe allowfullscreen webkitallowfullscreen mozallowfullscreen width=\"640\" height=\"360\" src=\"https://fast.player.liquidplatform.com/pApiv2/embed/ad9be96c2fb14b26a3145308c5eacb10/42c272ab9ce8105cb412782e0a2e1999\" scrolling=\"no\" frameborder=\"0\"></iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png",
+              "$$hashKey": "object:499"
             },
             {
-              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/0vrdgDdPApQ\" frameborder=\"0\" allowfullscreen><\/iframe>",
-              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+              "html": "<iframe allowfullscreen webkitallowfullscreen mozallowfullscreen width=\"640\" height=\"360\" src=\"https://fast.player.liquidplatform.com/pApiv2/embed/ad9be96c2fb14b26a3145308c5eacb10/c55503d634238227c21e2f7ce650c750\" scrolling=\"no\" frameborder=\"0\"></iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png",
+              "$$hashKey": "object:500"
             },
             {
-              "html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/iNJdPyoqt8U\" frameborder=\"0\" allowfullscreen><\/iframe>",
-              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png"
+              "html": "<iframe allowfullscreen webkitallowfullscreen mozallowfullscreen width=\"640\" height=\"360\" src=\"https://fast.player.liquidplatform.com/pApiv2/embed/ad9be96c2fb14b26a3145308c5eacb10/65f593cb49ee58d1244f156e730e5e81\" scrolling=\"no\" frameborder=\"0\"></iframe>",
+              "thumbnail": "https://thethemefoundry.com/wp-content/themes/ttf-reloaded/images/single-theme/video-thumbnail.png",
+              "$$hashKey": "object:501"
             }
           ]
         },
@@ -99,20 +113,14 @@
         },
         "categories": [
           {
-            "slug": "ruby",
-            "cover": "https://unsplash.it/942/258?image=1"
+            "slug": "policia-militar",
+            "cover": "https://edools-3-production.s3.amazonaws.com/org-6499%2Fschool-6516%2F9d8c47f5a0d395eeaf1d59adc71eddf3%2FBanner+fixo_PM.jpg",
+            "$$hashKey": "object:544"
           },
           {
-            "slug": "basic",
-            "cover": "https://unsplash.it/942/258?image=2"
-          },
-          {
-            "slug": "advanced",
-            "cover": "https://unsplash.it/942/258?image=3"
-          },
-          {
-            "slug": "category_1_subcategory_1_subcategory",
-            "cover": "https://unsplash.it/942/258?image=4"
+            "slug": "policia-civil-sp",
+            "cover": "https://edools-3-production.s3.amazonaws.com/org-6499%2Fschool-6516%2Fc9cedc4bdae078dfd7115676fcb177b9%2FBanner+fixo_PC.jpg",
+            "$$hashKey": "object:545"
           }
         ]
       }
